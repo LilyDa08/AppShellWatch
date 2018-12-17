@@ -1,4 +1,4 @@
-//let xhr = new XMLHttpRequest();
+let xhr = new XMLHttpRequest();
 
 let articles = "";
 let feature = "";
