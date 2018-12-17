@@ -1,4 +1,4 @@
-var cacheName = 'shell-content';
+var cacheName = 'shell-content.V.2';
 var filesToCache = [
   './Homepage.html',   // html file
   './assets/css/homepage.css',
