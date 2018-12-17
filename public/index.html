@@ -42,7 +42,7 @@
         </li>
       </ul>
     </div>
-    <a class="col-6 offset-md-5 col-md-2" href="Homepage.html" style="text-decoration: none"><h1>FooDog</h1></a>
+    <a class="col-6 offset-md-5 col-md-2" href="index.html" style="text-decoration: none"><h1>FooDog</h1></a>
 
     <form class="form-inline col-3 offset-md-3 col-md-2" action="#">
         <p class="headerSocial facebook"><a href="https://www.facebook.com/">
@@ -176,7 +176,7 @@
 
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      navigator.serviceWorker.register('./sw.js').then(function(registration) {
         // Registration was successful
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
       }).catch(function(err) {
