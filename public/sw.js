@@ -1,6 +1,5 @@
-var cacheName = 'shell-content.V.6';
+var cacheName = 'shell-content.V.7';
 var filesToCache = [
-  './',
   './offline.html',  // html file
   './assets/css/offline.css'
 ];
