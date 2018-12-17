@@ -1,4 +1,4 @@
-var cacheName = 'shell-content.V.2';
+var cacheName = 'shell-content.V.3';
 var filesToCache = [
   './',
   './index.html',   // html file
@@ -15,3 +15,8 @@ self.addEventListener('install', function(e) {
     })
   );
 });
+
+self.addEventListener('activate', function (e) {
+  console.log('[Service Worker] activate');
+
+} );
