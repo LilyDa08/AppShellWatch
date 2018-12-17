@@ -65,10 +65,11 @@ xhr.onreadystatechange = function () {
     let imghome = document.querySelectorAll(".imagehp");
     let titleHome = document.querySelectorAll(".titlehp");
     let textHome = document.querySelectorAll(".texthp");
+    let url = parsedData.docs[0].imgUrl.replace(/^http:\/\//i, 'http://');
 
     carrous += /*html*/ `
 
-      <a href="article.html?id=${parsedData.docs[0]._id}"> <img src="${parsedData.docs[0].imgUrl}" class="imghome" alt="bob"> </a>
+      <a href="article.html?id=${parsedData.docs[0]._id}"> <img src="${url}" class="imghome" alt="bob"> </a>
         <div class="banniere">
           <h2>wellness</h2>
           <p class="title-ban col-12">${parsedData.docs[0].title}</p>
@@ -79,11 +80,11 @@ xhr.onreadystatechange = function () {
     //*****************************************************************************
 
     for (let i = 1; i < 5; i++) {
-
+ let url = parsedData.docs[i].imgUrl.replace(/^http:\/\//i, 'http://');
       other += /*html*/ `
         
           <div class="asideOne col-lg-6">
-            <div class="aside-img col-12"><a href="article.html?id=${parsedData.docs[i]._id}"><img class="col-12" src="${parsedData.docs[i].imgUrl}" alt="billy"></a></div>
+            <div class="aside-img col-12"><a href="article.html?id=${parsedData.docs[i]._id}"><img class="col-12" src="${url}" alt="billy"></a></div>
             <p class="aside-title col-12">${parsedData.docs[i].title}</p>
           </div>
          `
@@ -98,11 +99,13 @@ xhr.onreadystatechange = function () {
       for (let t = 0; t < parsedData.docs[i].tagForArticle.length; t++) {
         tags += `<a href='community.html?tag=${parsedData.docs[i].tagForArticle[t]}'><p class="cat-first col-lg-7">${parsedData.docs[i].tagForArticle[t]}</p></a>`;
       }
+ let url = parsedData.docs[i].imgUrl.replace(/^http:\/\//i, 'http://');
+
       feature += /*html*/ `
 
 <article class="row article">
         <div class="article-img col-5 col-lg-6">
-        <a href="article.html?id=${parsedData.docs[i]._id}"><img src="${parsedData.docs[i].imgUrl}" alt="more"></a>
+        <a href="article.html?id=${parsedData.docs[i]._id}"><img src="${url}" alt="more"></a>
          </div>
         <div class="text-article col-7 col-lg-6">
           <div class="row cat-article col-lg-5">
@@ -127,12 +130,13 @@ xhr.onreadystatechange = function () {
     //******************************************************************************/
 
     for (let i = 1; i < 5; i++) {
+      let url = parsedData.docs[i].imgUrl.replace(/^http:\/\//i, 'http://');
 
       latest += /*html*/ `
 
         <article class="row article col-lg-6">
           <div class="article-img col-5 col-lg-12">
-          <a href="article.html?id=${parsedData.docs[i]._id}"><img src="${parsedData.docs[i].imgUrl}" alt="cazzo"></a>
+          <a href="article.html?id=${parsedData.docs[i]._id}"><img src="${url}" alt="cazzo"></a>
           </div>
           <div class="text-article col-7 col-lg-12">
             <p class="cat-second">nutrition</p>
@@ -149,9 +153,11 @@ xhr.onreadystatechange = function () {
     document.querySelector(".latest-row").innerHTML = latest;
 
     for (let i = 0; i < 3; i++) {
+ let url = parsedData.docs[i].imgUrl.replace(/^http:\/\//i, 'http://');
+
       popular += /*html*/ `<a class="row f-aside col-md-12">
       <div class="aside-img col-12 col-md-4">
-          <img class="col-12" src="${parsedData.docs[i].imgUrl}" alt="caffe">
+          <img class="col-12" src="${url}" alt="caffe">
       </div>
       <p class="aside-title col-12 col-md-8">${parsedData.docs[i].title}</p>
   </a>`
