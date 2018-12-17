@@ -1,4 +1,4 @@
-var cacheName = 'shell-content.V.3';
+var cacheName = 'shell-content.V.4';
 var filesToCache = [
   './',
   './offline.html',  // html file
