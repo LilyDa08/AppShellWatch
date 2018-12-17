@@ -65,7 +65,7 @@ xhr.onreadystatechange = function () {
     let imghome = document.querySelectorAll(".imagehp");
     let titleHome = document.querySelectorAll(".titlehp");
     let textHome = document.querySelectorAll(".texthp");
-    let url = parsedData.docs[0].imgUrl.replace(/^http:\/\//i, 'http://');
+    let url = parsedData.docs[0].imgUrl.replace(/^http:\/\//i, 'https://');
 
     carrous += /*html*/ `
 
@@ -80,7 +80,7 @@ xhr.onreadystatechange = function () {
     //*****************************************************************************
 
     for (let i = 1; i < 5; i++) {
- let url = parsedData.docs[i].imgUrl.replace(/^http:\/\//i, 'http://');
+ let url = parsedData.docs[i].imgUrl.replace(/^http:\/\//i, 'https://');
       other += /*html*/ `
         
           <div class="asideOne col-lg-6">
@@ -99,7 +99,7 @@ xhr.onreadystatechange = function () {
       for (let t = 0; t < parsedData.docs[i].tagForArticle.length; t++) {
         tags += `<a href='community.html?tag=${parsedData.docs[i].tagForArticle[t]}'><p class="cat-first col-lg-7">${parsedData.docs[i].tagForArticle[t]}</p></a>`;
       }
- let url = parsedData.docs[i].imgUrl.replace(/^http:\/\//i, 'http://');
+ let url = parsedData.docs[i].imgUrl.replace(/^http:\/\//i, 'https://');
 
       feature += /*html*/ `
 
@@ -130,7 +130,7 @@ xhr.onreadystatechange = function () {
     //******************************************************************************/
 
     for (let i = 1; i < 5; i++) {
-      let url = parsedData.docs[i].imgUrl.replace(/^http:\/\//i, 'http://');
+      let url = parsedData.docs[i].imgUrl.replace(/^http:\/\//i, 'https://');
 
       latest += /*html*/ `
 
@@ -153,7 +153,7 @@ xhr.onreadystatechange = function () {
     document.querySelector(".latest-row").innerHTML = latest;
 
     for (let i = 0; i < 3; i++) {
- let url = parsedData.docs[i].imgUrl.replace(/^http:\/\//i, 'http://');
+ let url = parsedData.docs[i].imgUrl.replace(/^http:\/\//i, 'https://');
 
       popular += /*html*/ `<a class="row f-aside col-md-12">
       <div class="aside-img col-12 col-md-4">
