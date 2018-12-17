@@ -1,0 +1,24 @@
+{
+  "name": "foodog",
+  "version": "1.0.0",
+  "description": "FooDog  ======",
+  "main": "sw.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LilyDa08/FooDog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LilyDa08/FooDog/issues"
+  },
+  "homepage": "https://github.com/LilyDa08/FooDog#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "sw-precache": "^5.2.1",
+    "workbox-sw": "^3.6.3"
+  }
+}

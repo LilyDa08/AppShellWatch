@@ -1,0 +1,809 @@
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: #000000;
+    /* Fallback color */
+    background-color: #00000066;
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Modal above XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 13px;
+    font-family: "Open Sans", sans-serif;
+    color: #414040;
+}
+
+.headerTop {
+    margin: 0;
+    width: 100%;
+}
+
+.loupe {
+    margin: 0;
+    color: black;
+    font-size: 25px;
+    padding-top: 20px;
+}
+
+#navbar class-items p {
+    color: #000;
+}
+
+#linkTitolo {
+    text-decoration: none;
+    color: #303336;
+}
+
+#linkTitolo:hover {
+    color: #303336;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: "Crimson text";
+    font-size: 3em;
+    padding: 0;
+    margin: 0;
+    margin-top: 2vw;
+    text-align: center;
+}
+
+.headerBottom {
+    display: none;
+}
+
+.facebook,
+.twitter,
+.insta {
+    display: none;
+}
+
+.h2title {
+    padding: 0;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: #B84D00;
+    font-size: 1.5em;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 1vw;
+    text-align: center;
+    background-color: #f5f5f5;
+    width: 100vw;
+}
+
+/* HEADER CSS BELOW */
+
+
+#navbar {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+}
+
+.dropbtn {
+    background-color: #e56100;
+    color: white;
+    font-size: 13px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 32px;
+    margin-left: 14px;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #e56100;
+}
+
+.dropdown {
+    padding: 1.25rem;
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    margin: 0;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px #00000033;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 2px 16px;
+    display: block;
+    font-size: 15px;
+    font-weight: 200;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.dropdown ion-icon {
+    height: 2.5em;
+    width: 2.5em;
+}
+
+/*sep*/
+
+.ricerca {
+    position: relative;
+    display: inline-block;
+}
+
+input {
+    border-radius: 5px;
+}
+
+/*endsep*/
+
+form {
+    padding-right: 0;
+}
+
+.btn-default {
+    padding: .5rem .75rem 0.125rem;
+}
+
+/* MAIN CSS BELOW */
+
+main {
+    padding: 0 !important;
+}
+
+article {
+    border-bottom: solid 2px rgba(128, 128, 128, 0.1);
+    margin: 0;
+    padding-bottom: 1vh;
+    padding-top: 5px;
+}
+
+.article-img img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+}
+
+figure {
+    margin-bottom: 3px;
+    padding: 8px 0;
+    margin: auto;
+    height: 18vh;
+}
+
+.articles {
+    margin: 0 auto;
+}
+
+.categoryArticle {
+    margin: 0;
+    display: none;
+    text-transform: uppercase;
+    color: #C82A0E;
+    border-right: solid 2px #cecdcd;
+    padding-right: 9px;
+}
+
+.titleArticle {
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left: 1vh;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.previewArticle {
+    display: none;
+}
+
+.share-btn {
+    display: none;
+}
+
+.readmore {
+    text-align: right;
+    align-content: space-between;
+    position: absolute;
+    right: 10px;
+    bottom: -5px;
+}
+
+.readmore a {
+    text-transform: uppercase;
+    color: #C75300;
+    font-size: 0.9em !important;
+}
+
+.page-navigation {
+    text-align: center;
+    margin: 1.5vh auto;
+    width: 100vw !important;
+}
+
+.btn-circle {
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.42857;
+    background-color: white;
+    border: 1px solid #959595;
+    font-size: 15px;
+    width: 35px;
+    height: 35px;
+    padding: 6px;
+}
+
+.btn-dark {
+    background-color: #959595;
+}
+
+.btn-circle ion-icon {
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+/* FOOTER CSS BELOW */
+
+.footer-up {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-title {
+    margin: 0;
+    padding: 1vh 0;
+    color: #B5B5B5;
+    font-size: 1.1em;
+}
+
+#titleCategories {
+    padding: 0;
+}
+
+#allCategories {
+    margin: 0;
+    padding: 0.2vh 1vh;
+}
+
+#allCategories a {
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    padding-bottom: 1vh;
+    font-size: 1.2em;
+}
+
+#allCategories a:hover {
+    color: #e56100;
+}
+
+#instaPictures {
+    text-align: center;
+    padding: 0;
+    padding-bottom: 2vh;
+    margin: 0;
+    width: 100%;
+}
+
+.col-footer p {
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+footer {
+    background-color: #3A3E43;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+    height: 30px;
+}
+
+.imgInsta {
+    height: 100px;
+    padding: 0;
+    margin: 0;
+}
+
+.imgInsta img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 80%;
+    height: 100%;
+}
+
+.f-AllAside {
+    display: none;
+}
+
+#instagram {
+    padding: 0;
+    margin: 0;
+}
+
+.thumbnail-md {
+    display: none;
+}
+
+#social ion-icon {
+    background-color: #3A3E43;
+    height: 2vh;
+    width: 2vh;
+    padding: 1vh;
+    border-radius: 50%;
+}
+
+#social {
+    background-color: #303336;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    height: 6vh;
+}
+
+.social-links {
+    position: absolute;
+    right: 2vw;
+}
+
+#social a {
+    text-align: center;
+    padding: 1vh 0;
+    align-items: center;
+    margin-right: 2vh;
+}
+
+/* XXXXXXXXXXXXXXXX ----- TABLET --------XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXX TABLET XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+@media only screen and (min-width : 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    /*HEADER-NAV CSS*/
+    nav {
+        width: 100vw;
+        background-color: white;
+        position: fixed;
+        z-index: 20;
+    }
+
+    h1 {
+        margin-top: 0;
+        font-size: 2.5em;
+        padding-top: 20px;
+    }
+
+    .loupe {
+        margin-left: 17px;
+        font-size: 30px;
+    }
+
+    .btn-default {
+        font-size: 1.8em;
+    }
+
+    /*MAIN CSS*/
+    main {
+        width: 90vw;
+        margin: 0;
+        padding-top: 10vh !important;
+    }
+
+    main .col-md {
+        margin-left: 0 !important;
+    }
+
+    h2 {
+        font-size: 1em;
+        padding-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    figure {
+        height: 160px;
+    }
+
+    .article {
+        width: 80%;
+        margin: auto;
+        padding-top: 10px;
+    }
+
+    .article-img img {
+        height: 85%;
+    }
+
+    .categoryArticle {
+        display: block;
+        width: 20%;
+        font-size: 0.7em;
+        margin-bottom: 6px;
+    }
+
+    .titleArticle {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .previewArticle {
+        font-size: 14px;
+        display: block;
+    }
+
+    .readmore {
+        bottom: 0;
+    }
+
+    .readmore a {
+        font-size: 2.5vw;
+    }
+
+    .btn-circle {
+        font-size: 15px;
+        width: 30px;
+        height: 30px;
+        padding: 4px;
+    }
+
+    /*FOOTER CSS*/
+
+    footer .col-footer {
+        padding: 0;
+    }
+
+    .footer-title {
+        padding: 0;
+        padding-top: 3.5vh;
+        padding-bottom: 10px;
+        font-size: 0.8em;
+    }
+
+    #allCategories {
+        margin: 0;
+        margin-right: 30px;
+    }
+
+    #allCategories a {
+        margin: 0;
+        text-align: left;
+        font-size: 0.8em;
+        border-bottom: 1px solid #4d4d4d;
+        padding: 1.2vh 0;
+    }
+
+    .f-AllAside {
+        display: block;
+    }
+
+    .f-aside {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 1.5vh;
+        padding-right: 2vh;
+    }
+
+    .f-aside .aside-img {
+        padding: 0;
+        margin: 0;
+        height: 70px;
+    }
+
+    .f-aside img {
+        padding: 0;
+        margin: 0;
+        object-fit: cover;
+        object-position: 50% 50%;
+        height: 90%;
+        width: 90%;
+    }
+
+    .f-article {
+        padding: 0;
+    }
+
+    footer .aside-title {
+        padding: 0 0 0 15px;
+        margin: 0;
+        color: white;
+        font-weight: bold;
+        text-transform: capitalize;
+        font-size: 0.8em;
+    }
+
+    .thumbnail-md {
+        display: block;
+    }
+
+
+    footer a {
+        text-decoration: none;
+        color: #ffffff;
+        height: 60px;
+    }
+
+    .imgInsta {
+        height: 80px;
+        padding: 0;
+
+    }
+
+    .imgInsta img {
+        object-fit: cover;
+        object-position: 50% 50%;
+        width: 90%;
+        height: 90%;
+    }
+
+    #social {
+        height: 40px;
+    }
+
+    .social-links {
+        right: 16vw;
+    }
+
+    #social a {
+        margin-right: 0;
+    }
+
+    #social ion-icon {
+        padding: 0.5vh;
+    }
+}
+
+/* ------XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX- DESKTOP -XXXXXXXXXXXXXXXXXX----------*/
+/* ---------------------XXXXXXXXXXXXXXXXXXX DESKTOP XXXXXXXXXXXXXX-----*/
+
+@media only screen and (min-width : 992px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    nav {
+        border-bottom: 2px solid #F5F5F5;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .loupe {
+        margin-top: 5px;
+        margin-left: 4px;
+        font-size: 12px;
+        padding: 0;
+    }
+
+    input {
+        border-radius: 5px;
+    }
+
+    .facebook,
+    .twitter,
+    .insta {
+        display: initial;
+    }
+
+    .headerSocial {
+        margin: 4px;
+    }
+
+    .headerSocial a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .headerBottom {
+        padding-bottom: 10px;
+        margin-top: 7px;
+        display: flex;
+    }
+
+    .headerCat {
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 12px;
+    }
+
+    .headerCat a {
+        padding-bottom: 0.5rem;
+        text-decoration: none;
+        color: black;
+    }
+
+    .headerCat a:hover,
+    .headerCat a:active {
+        border-bottom: 2px solid #f46700;
+    }
+
+    /*MAIN CSS BELOW*/
+
+    h2 {
+        width: 100%;
+        font-size: 0.9em;
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: rgb(112, 112, 112);
+        padding: 17px;
+    }
+
+    main {
+        width: 40%;
+        margin-right: 0;
+        padding-top: 13vh !important;
+    }
+
+    figure {
+        padding: 0;
+        height: 130px;
+    }
+
+    #allArticle {
+        margin: auto;
+    }
+
+    .article-img img {
+        object-fit: cover;
+        object-position: 50% 50%;
+        width: 100%;
+        height: 90%;
+    }
+
+    article {
+        border-bottom: solid 2px rgba(128, 128, 128, 0.1);
+        margin: 0;
+    }
+
+    .categoryArticle {
+        font-size: 9.5px;
+    }
+
+    .articles {
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 57px;
+    }
+
+    .titleArticle {
+        font-size: 0.9em;
+        font-weight: 600;
+        line-height: 130%;
+        padding-bottom: 8px;
+    }
+
+    .previewArticle {
+        font-size: 12px; /*<-REMOVE WHEN DONE TESTING */
+        line-height: 150%;
+        color: #575757;
+    }
+
+    .share-btn {
+        display: flex;
+        align-items: center;
+        color: #575757;
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 0.8em; /*<-REMOVE WHEN DONE TESTING */
+        padding-left: 15px;
+        padding-top: 5px;
+    }
+
+    .share-btn ion-icon {
+        border: 1px solid #959595;
+        border-radius: 50%;
+        padding: 5px;
+        font-size: 1.5em;
+        color: black;
+        margin-right: 7px;
+    }
+
+    .readmore {
+        display: none;
+    }
+
+    .btn-circle {
+        font-size: 10px;
+        width: 2.5vw;
+        height: 2.5vw;
+        padding: 3px;
+    }
+
+    /*FOOTER CSS BELOW*/
+
+    #allCategories {
+        padding: 0;
+    }
+
+    #allCategories a {
+        font-size: 12px;
+        padding: 12px 0;
+    }
+
+    .footer-title {
+        font-size: 12px; /*<-REMOVE WHEN DONE TESTING */
+    }
+
+    footer .aside-title {
+    padding: 0;
+    font-size: 12px; /*<-REMOVE WHEN DONE TESTING */
+    }
+
+
+
+}
