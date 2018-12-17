@@ -14,10 +14,10 @@ self.addEventListener('install', function(e) {
   );
 });
 
-// self.addEventListener('activate', function (e) {
-//   console.log('[Service Worker] activate');
+self.addEventListener('activate', function (e) {
+  console.log('[Service Worker] activate');
 
-// } );
+} );
 
 self.addEventListener('fetch', function (e) {
   e.respondWith(
