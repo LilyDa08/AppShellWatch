@@ -1,9 +1,8 @@
 var cacheName = 'shell-content.V.3';
 var filesToCache = [
   './',
-  './index.html',   // html file
-  './assets/css/homepage.css',
-  './assets/js/homepage.js'
+  './offline.html',  // html file
+  './assets/css/offline.css'
 ];
 
 self.addEventListener('install', function(e) {

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Duplication project of a website a bout taking care of your four legged companions">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Duplication project of a website a bout taking care of your four legged companions">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.ico">
+
+  <title>FooDog</title>
+  <link rel="stylesheet" href="assets/css/offline.css">
+  <link rel="manifest" href="../manifest.json">
+</head>
+
+<body>
+  <header>
+    <h1>FooDog</h1>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </header>
+  <main>
+    <section>
+      <div class="main">
+        <div class="main-img"></div>
+        <div class="main-text"></div>
+        <div class="main-text" style="width: 25vw; height : 10px"></div>
+        <div class="main-text" style="width: 12vw; height : 10px"></div>
+      </div>
+
+      <div class="aside">
+        <div class="art-aside">
+          <div class="img-aside"></div>
+          <div class="aside-title"></div>
+        </div>
+        <div class="art-aside">
+          <div class="img-aside"></div>
+          <div class="aside-title"></div>
+        </div>
+        <div class="art-aside">
+          <div class="img-aside"></div>
+          <div class="aside-title"></div>
+        </div>
+        <div class="art-aside">
+          <div class="img-aside"></div>
+          <div class="aside-title"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').then(function (registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }).catch(function (err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    }
+  </script>
+
+</body>
+
+</html>
