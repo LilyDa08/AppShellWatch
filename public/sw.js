@@ -1,4 +1,4 @@
-var cacheName = 'shell-content.V.8';
+var cacheName = 'shell-content.V.9';
 var filesToCache = [
   './offline.html',  // html file
   './assets/css/offline.css'
@@ -14,7 +14,7 @@ self.addEventListener('install', function(e) {
   );
 });
 
-self.addEventListener('activate', function (e) {
+self.addEventListener('activate', function () {
   console.log('[Service Worker] activate');
 } );
 
