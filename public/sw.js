@@ -1,7 +1,7 @@
-var cacheName = 'shell-content.V.9';
+var cacheName = 'shell-content.V.10';
 var filesToCache = [
-  './offline.html',  // html file
-  './assets/css/offline.css'
+  'public/index.html',  // html file
+  'public/assets/css/offline.css'
 ];
 
 self.addEventListener('install', function(e) {
