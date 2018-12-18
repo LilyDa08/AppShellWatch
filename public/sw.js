@@ -1,12 +1,11 @@
 
-let version = "3";
+let version = "4";
 const cacheName = `FD-${version}`;
 
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(cacheName).then(cache => {
       return cache.addAll([
-        `/`,
         `/offline.html`,
         `/assets/css/offline.css`
       ])
