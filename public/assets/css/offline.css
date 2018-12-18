@@ -96,6 +96,6 @@ h1 {
     border-radius: 5px;
 }
 
-.featured, .latest, footer {
+#myModal, .featured, .latest, footer {
     display: none;
 }

@@ -1,5 +1,5 @@
 
-let version = "8";
+let version = "9";
 const cacheName = `FD-${version}`;
 
 self.addEventListener('install', e => {
