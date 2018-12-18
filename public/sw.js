@@ -1,6 +1,5 @@
-var cacheName = 'shell-content.V.13';
+var cacheName = 'shell-content.V.14';
 var filesToCache = [
-  './',
   './offline.html', // html file
   './assets/css/offline.css'
 ];
@@ -21,9 +20,11 @@ self.addEventListener('activate', function (e) {
   console.log('[Service Worker] activate');
 });
 
+
+
 e.waitUntil(
-  caches.keys().then(function(keyList) {
-    return Promise.all(keyList.map(function(key) {
+  caches.keys().then(function (keyList) {
+    return Promise.all(keyList.map(function (key) {
       if (key !== cacheName) {
         console.log('[ServiceWorker] Removing old cache', key);
         return caches.delete(key);
@@ -32,15 +33,17 @@ e.waitUntil(
   })
 );
 
-return self.clients.claim();
 
-// self.addEventListener('fetch', function (e) {
-//   e.respondWith(
-//     caches.match(e.request).then(function (response) {
-//       return response || fetch(e.request);
-//     })
-//   )
-// })
+
+self.addEventListener('fetch', function (e) {
+  e.respondWith(
+    caches.match(e.request).then(function (response) {
+      return response || fetch(e.request);
+    })
+  )
+})
+
+
 
 // self.addEventListener('fetch', function (event) {
 //   console.log('Fetch event for ', event.request.url);
@@ -53,11 +56,13 @@ return self.clients.claim();
 //       console.log('Network request for ', event.request.url);
 //       return fetch(event.request)
 
-//     }).catch(function (error) {
-//       console.log(error);
-//     })
+//     }).catch(function(err) {
+//   console.log('failed ', err);
+// });
 //   );
 // });
+
+
 
 // self.addEventListener('fetch', function(event) {
 //   console.log('Fetch event for ', event.request.url);
