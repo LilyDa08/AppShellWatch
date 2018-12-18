@@ -16,7 +16,7 @@ body {
 
 
 #navbar, #collapsibleNavbar, #myModal, .featured, .latest, footer {
-    display: initial;
+    visibility: visible;
 }
 
 #onglets {

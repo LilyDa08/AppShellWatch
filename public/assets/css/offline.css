@@ -94,5 +94,5 @@ h1 {
 
 
 #navbar, #collapsibleNavbar, #myModal, .featured, .latest, footer {
-    display: none;
+    visibility: hidden;
 }
