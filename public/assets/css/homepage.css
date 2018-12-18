@@ -14,6 +14,10 @@ body {
 /*  ORANGE color: #f46700;   */
 /* FONT pour les titre : CRIMSON TEXT   */
 
+#offline {
+    display: none;
+}
+
 #onglets {
     display: none;
     padding: 5px 0;
