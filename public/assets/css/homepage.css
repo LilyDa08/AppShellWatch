@@ -48,12 +48,12 @@ section {
 
 .aside {
     /* border: 2px solid rgba(255, 211, 146, 0.4); */
-    width: 45%;
+    /* width: 45%;
     height: 43vh;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex;
+    justify-content: space-between; */
+    /* align-items: flex;
 }
 
 .art-aside {
@@ -80,7 +80,9 @@ section {
 /*  -OFFLINE- */
 
 
-
+#offline {
+    display: none;
+}
 
 
 #onglets {
