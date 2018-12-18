@@ -14,129 +14,16 @@ body {
 /*  ORANGE color: #f46700;   */
 /* FONT pour les titre : CRIMSON TEXT   */
 
-#onglets {
-    display: flex;
-    padding: 5px 0;
+
+h1 {
     text-align: center;
 }
 
-.loupe {
-    font-size: 2em;
-    color: black;
-}
-
-.ricerca {
-    margin: 0;
-    padding: 0;
-    position: relative;
-    display: inline-block;
-}
-
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: #000000; /* Fallback color */
-    background-color: #00000066; /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%;
-}
-
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-input {
-    border-radius: 5px;   
-}
-
-/*endsep*/
-
-form {
-    padding-right: 0;
-}
-
-.btn-default {
-    padding: .5rem .75rem 0.125rem;
-}
-
-
-#navbar {
-    height: 10vh;
-    padding-bottom: 5px;
-}
-
-.facebook,
-.twitter,
-.insta {
+#navbar, #collapsibleNavbar{
     display: none;
 }
 
-h1 {
-    font-family: "Crimson text";
-    font-size: 3em;
-    padding: 0;
-    margin: 0;
-    margin-top: 2vw;
-    text-align: center;
-    color: #303336;
-}
-h1:hover {
-    color: #303336;
-    text-decoration: none;
-}
-
-h2 {
-    color: #e56100;
-    text-transform: uppercase;
-    font-size: 1em;
-    padding-bottom: 0.1vw;
-    font-weight: 200;
-    letter-spacing: 1px;
-    margin: 0;
-}
-
-
-.onglet {
-    text-decoration: none;
-    color: #303336;
-    font-size: 0.85em;
-    text-transform: uppercase;
-    padding: 0;
-    margin: 0 auto;
-}
-.onglet:hover {
-    text-decoration: none;
-    color: #303336;
-    border-bottom: 2px solid #f46700;
-    padding: 0;
-}
-
-#offline ul {
+#offline-header ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
@@ -144,7 +31,7 @@ h2 {
     padding: 0;
 }
 
-#offline li {
+#offline-header li {
     font-size: 0.8em;
     font-family: sans-serif;
     /* background-color: rgba(255, 211, 146, 0.4); */
