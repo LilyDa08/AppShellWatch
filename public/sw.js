@@ -1,7 +1,7 @@
-var cacheName = 'shell-content.V.15';
+var cacheName = 'shell-content.V.16';
 var filesToCache = [
-  './offline.html', // html file
-  './assets/css/offline.css'
+  './index.html', // html file
+  './assets/css/homepage.css'
 ];
 
 self.addEventListener('install', function (e) {
@@ -32,8 +32,6 @@ self.addEventListener('activate', function (e) {
 });
 
 
-
-
 self.addEventListener('fetch', function (e) {
   e.respondWith(
     caches.match(e.request).then(function (response) {
@@ -41,7 +39,6 @@ self.addEventListener('fetch', function (e) {
     })
   )
 })
-
 
 
 // self.addEventListener('fetch', function (event) {
