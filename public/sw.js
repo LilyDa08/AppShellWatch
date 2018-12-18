@@ -1,4 +1,4 @@
-var cacheName = 'shell-content.V.14';
+var cacheName = 'shell-content.V.15';
 var filesToCache = [
   './offline.html', // html file
   './assets/css/offline.css'
@@ -18,20 +18,19 @@ self.addEventListener('install', function (e) {
 
 self.addEventListener('activate', function (e) {
   console.log('[Service Worker] activate');
+
+  e.waitUntil(
+    caches.keys().then(function (keyList) {
+      return Promise.all(keyList.map(function (key) {
+        if (key !== cacheName) {
+          console.log('[ServiceWorker] Removing old cache', key);
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
 });
 
-
-
-e.waitUntil(
-  caches.keys().then(function (keyList) {
-    return Promise.all(keyList.map(function (key) {
-      if (key !== cacheName) {
-        console.log('[ServiceWorker] Removing old cache', key);
-        return caches.delete(key);
-      }
-    }));
-  })
-);
 
 
 
