@@ -14,10 +14,13 @@ body {
 /*  ORANGE color: #f46700;   */
 /* FONT pour les titre : CRIMSON TEXT   */
 
+/*---- SHOW USEFULL CONTENT ----*/
 
 #navbar, #collapsibleNavbar, #myModal, .featured, .latest, footer {
     visibility: visible;
 }
+
+/* ---------------------------- */
 
 #onglets {
     display: none;
